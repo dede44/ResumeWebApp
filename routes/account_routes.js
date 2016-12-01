@@ -3,12 +3,12 @@
 
 var express = require('express');
 var router = express.Router();
-var school_dal = require('../model/account_dal');
+var account_dal = require('../model/account_dal');
 
 
 // View All accounts
 router.get('/all', function(req, res) {
-    school_dal.getAll(function(err, result){
+    account_dal.getAll(function(err, result){
         if(err) {
             res.send(err);
         }
